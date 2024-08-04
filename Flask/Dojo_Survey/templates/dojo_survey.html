@@ -10,20 +10,21 @@
 </head>
 
 <body>
-    <div class="text-center container- container-fluid">
-        <h1>Dojo Survey</h1>
-        <label for="info">info</label>
+    <div class="container col-5 py-4 px-3 text-center bg-secondary h-100-d-inline rounded-1">
+        <h1 class="text-warning">Dojo Survey</h1>
+        <label for="info"></label>
         <form action="/info" method="post">
+        
+            <div class="name mb-3 text-white col-1">
+                <label for="name">Name:</label>
+                <input type="text" name="name">
+            </div>
 
 
-            <label for="name">Name:</label>
-            <input type="text" id="name="name">
-
-
-            <div class="location">
-                <label for="location" class>Dojo Location: </label>
+            <div class="location mb-3 text-white col-1 ">
+                <label for="location" class="d-inline text-left">Dojo Location:</label>
                 <select name="location" id="location">
-                    <option value="selected">-- Select a location --</option>
+                    <option value="selected"> -- Select a location -- </option>
                     <option value="Online">Online</option>
                     <option value="Bellevue">Bellevue</option>
                     <option value="Burbank">Burbank</option>
@@ -33,25 +34,25 @@
             </div>
 
 
-            <div class="language">
+            <div class="language mb-3 text-white col-1">
                 <label for="language">Favorite Language: </label>
                 <select name="language" id="language">
-                    <option value="selected">-- Selection a language --</option>
+                    <option value="selected"> -- Select a language -- </option>
                     <option value="Python">Python</option>
                     <option value="MERN">MERN</option>
                     <option value="JAVA">JAVA</option>
                     <option value="C#">C#</option>
                 </select>
-
-
             </div>
 
-            <div class="comment mb-3">
+
+            <div class="comment mb-3 text-white col-1">
                 <label for="comment">Comments (optional):</label>
                 <input type="text" id="comment" name="comment">
             </div>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+
+            <button type="submit" class="btn btn-warning">Submit</button>
 
         </form>
     </div>

@@ -11,10 +11,11 @@ def index():
 def user():
     print(request.form)
 
-    session["name"] = ["name"]
-    session["dojo_location"] = ["dojo_location"] 
-    session["language"] = ["language"]
-    session["comment"] = ["comment"] 
+
+    session["name"] = request.form["name"]
+    session["location"] = request.form["location"] 
+    session["language"] = request.form["language"]
+    session["comment"] = request.form["comment"] 
     return redirect('/form_results')
 
 
@@ -22,6 +23,12 @@ def user():
 def display_info():
     print('info.html')
     return render_template('/info.html')
+
+
+@app.route("/clear", methods=["POST"])  # This route is just the path of the url
+def clear_session():
+    session.clear()
+    return redirect("/")
 
 
 if __name__=="__main__":    
